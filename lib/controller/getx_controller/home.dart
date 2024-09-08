@@ -61,27 +61,27 @@ class HomeController extends GetxController {
 
   inviteDialogBox() async {
     Get.defaultDialog(
-        title: "Send Invitation",
-        titleStyle: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-        titlePadding: const EdgeInsets.only(right: 50, top: 15),
-        contentPadding: const EdgeInsets.only(right: 110, top: 20, bottom: 10),
-        content: const Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CommonText(
-              text: "Invite By SMS",
-              fSize: 16,
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            CommonText(
-              text: "Share",
-              fSize: 16,
-            ),
-          ],
-        ),
+      title: "Send Invitation",
+      titleStyle: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+      titlePadding: const EdgeInsets.only(right: 50, top: 15),
+      contentPadding: const EdgeInsets.only(right: 110, top: 20, bottom: 10),
+      content: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CommonText(
+            text: "Invite By SMS",
+            fSize: 16,
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          CommonText(
+            text: "Share",
+            fSize: 16,
+          ),
+        ],
+      ),
     );
   }
 
