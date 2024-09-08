@@ -30,8 +30,10 @@ class BottomNavBar extends StatelessWidget {
                   notchColor: Colors.blue,
                   removeMargins: false,
                   showShadow: false,
-                  itemLabelStyle:
-                      const TextStyle(fontSize: 10, color: Colors.black,fontWeight: FontWeight.w600),
+                  itemLabelStyle: const TextStyle(
+                      fontSize: 10,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600),
                   elevation: 1,
                   bottomBarItems: const [
                     BottomBarItem(
