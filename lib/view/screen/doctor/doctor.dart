@@ -18,7 +18,6 @@ class Doctor extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: screenHeight * 0.085,
-          automaticallyImplyLeading: false,
           backgroundColor: Colors.blue.shade100,
           title: Image.asset("assets/logos/Group 8.png"),
           centerTitle: true,
