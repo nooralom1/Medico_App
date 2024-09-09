@@ -5,6 +5,7 @@ import 'package:dr_apointment/view/screen/home/widget/category_view_card.dart';
 import 'package:dr_apointment/view/screen/home/widget/custom_slider.dart';
 import 'package:dr_apointment/view/common_widget/search_feild.dart';
 import 'package:dr_apointment/view/screen/hospital/hospital.dart';
+import 'package:dr_apointment/view/screen/notification/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -26,10 +27,14 @@ class Home extends StatelessWidget {
           backgroundColor: Colors.blue.shade100,
           title: Image.asset("assets/logos/Group 8.png"),
           centerTitle: true,
-          actions: const [
+          actions:  [
             Padding(
               padding: EdgeInsets.only(right: 20),
-              child: Icon(Icons.notifications_active_outlined),
+              child: InkWell(
+                onTap: (){
+                  Get.to(()=>NotificationPage());
+                },
+                  child: Icon(Icons.notifications_active_outlined)),
             )
           ],
         ),
