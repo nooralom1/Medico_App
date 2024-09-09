@@ -1,8 +1,8 @@
-import 'package:dr_apointment/controller/getx_controller/faq.dart';
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
 import 'package:dr_apointment/view/screen/bottom_navigation_bar.dart';
-import 'package:dr_apointment/view/screen/faq/widget/list_view_card.dart';
+import 'package:dr_apointment/view/screen/change_language/change_language.dart';
 import 'package:dr_apointment/view/screen/settings/widget/setting_list_card.dart';
+import 'package:dr_apointment/view/screen/settings/widget/show_about_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -47,7 +47,7 @@ class Settings extends StatelessWidget {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Get.off(() => const BottomNavBar());
+                        Get.back();
                       },
                       icon: const Icon(
                         Icons.arrow_back,
@@ -66,14 +66,20 @@ class Settings extends StatelessWidget {
                 screenHeight: screenHeight,
                 screenWidth: screenWidth,
                 name: 'Language',
-                onTap: () {},
+                onTap: () {
+                  Get.to(()=>const ChangeLanguage());
+                },
               ),
-              SizedBox(height: screenHeight*0.01,),
+              SizedBox(
+                height: screenHeight * 0.01,
+              ),
               SettingListViewCard(
                 screenHeight: screenHeight,
                 screenWidth: screenWidth,
                 name: 'About',
-                onTap: () {},
+                onTap: () {
+                  Get.dialog(ShowAboutDialog(screenHeight: screenHeight));
+                },
               ),
             ],
           ),
