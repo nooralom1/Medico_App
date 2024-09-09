@@ -1,5 +1,5 @@
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:dr_apointment/view/screen/bottom_navigation_bar.dart';
+import 'package:dr_apointment/view/screen/notification/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,10 +18,14 @@ class DoctorInfo extends StatelessWidget {
           backgroundColor: Colors.blue.shade100,
           title: Image.asset("assets/logos/Group 8.png"),
           centerTitle: true,
-          actions: const [
+          actions: [
             Padding(
               padding: EdgeInsets.only(right: 20),
-              child: Icon(Icons.notifications_active_outlined),
+              child: InkWell(
+                  onTap: () {
+                    Get.to(() => NotificationPage());
+                  },
+                  child: Icon(Icons.notifications_active_outlined)),
             )
           ],
         ),
@@ -44,7 +48,7 @@ class DoctorInfo extends StatelessWidget {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Get.off(() => const BottomNavBar());
+                        Get.back();
                       },
                       icon: const Icon(
                         Icons.arrow_back,
@@ -52,18 +56,14 @@ class DoctorInfo extends StatelessWidget {
                         size: 27,
                       )),
                   const CommonText(
-                    text: "Hospital Info",
+                    text: "Doctor Info",
                     fSize: 18,
                     fWeight: FontWeight.w600,
                   )
                 ],
               ),
-              SizedBox(height: screenHeight * 0.3),
-              CommonText(
-                text: "Coming Soon",
-                fSize: 28,
-                fColor: Color(0xffBAAFAF),
-              ),
+              SizedBox(height: screenHeight * 0.02),
+
             ],
           ),
         ),
