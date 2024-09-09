@@ -5,6 +5,7 @@ import 'package:dr_apointment/view/screen/department/department.dart';
 import 'package:dr_apointment/view/screen/doctor/doctor.dart';
 import 'package:dr_apointment/view/screen/doctor_report/doctor_report.dart';
 import 'package:dr_apointment/view/screen/faq/faq.dart';
+import 'package:dr_apointment/view/screen/home/widget/invite_dialog_box.dart';
 import 'package:dr_apointment/view/screen/hospital/hospital.dart';
 import 'package:dr_apointment/view/screen/investigation/investigation.dart';
 import 'package:dr_apointment/view/screen/settings/settings.dart';
@@ -44,7 +45,7 @@ class HomeController extends GetxController {
         Get.to(() => const Department());
         break;
       case 5:
-        inviteDialogBox();
+        Get.dialog(InviteDialog());
         break;
       case 6:
         Get.to(() => const Faq());
@@ -57,32 +58,6 @@ class HomeController extends GetxController {
         break;
     }
     isLoading.value = false;
-  }
-
-  inviteDialogBox() async {
-    Get.defaultDialog(
-      title: "Send Invitation",
-      titleStyle: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-      titlePadding: const EdgeInsets.only(right: 50, top: 15),
-      contentPadding: const EdgeInsets.only(right: 110, top: 20, bottom: 10),
-      content: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CommonText(
-            text: "Invite By SMS",
-            fSize: 16,
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          CommonText(
-            text: "Share",
-            fSize: 16,
-          ),
-        ],
-      ),
-    );
   }
 
   @override

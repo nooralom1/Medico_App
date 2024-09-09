@@ -1,10 +1,8 @@
 import 'package:dr_apointment/controller/getx_controller/home.dart';
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:dr_apointment/view/screen/doctor/doctor.dart';
 import 'package:dr_apointment/view/screen/home/widget/category_view_card.dart';
 import 'package:dr_apointment/view/screen/home/widget/custom_slider.dart';
 import 'package:dr_apointment/view/common_widget/search_feild.dart';
-import 'package:dr_apointment/view/screen/hospital/hospital.dart';
 import 'package:dr_apointment/view/screen/notification/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -65,11 +63,9 @@ class Home extends StatelessWidget {
                     screenWidth: screenWidth,
                     textEditingController: controller.searchController,
                     onTap: () {
-                      Get.defaultDialog(
-                          title: "Working.....",
-                          content: Center(
-                            child: CircularProgressIndicator(),
-                          ));
+                      Get.dialog(AlertDialog(
+
+                      ));
                     },
                     hinText: 'Search Hospital for doctor',
                     suffixIcon: Icons.search,
