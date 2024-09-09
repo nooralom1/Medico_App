@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 class CategoryService {
   static Future<CategoryListModel?> categoryService() async {
     try {
-      await Future.delayed(Duration(seconds: 3));
+      await Future.delayed(const Duration(seconds: 3));
       CategoryListModel response = CategoryListModel.fromJson(
           jsonDecode(jsonEncode(CategoryList.categoryList)));
       return response;
