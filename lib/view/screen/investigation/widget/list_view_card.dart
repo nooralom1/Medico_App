@@ -28,9 +28,8 @@ class InvestigationListViewCard extends StatelessWidget {
               padding:  const EdgeInsets.only(left: 10),
               child: Row(
                 children: [
-                  const Icon(Icons.arrow_forward_ios_outlined,size: 20,),
                   SizedBox(width: screenWidth*0.02,),
-                  CommonText(text: title,fSize: 16,fWeight: FontWeight.w600,)
+                  CommonText(text: title,fSize: 14,fWeight: FontWeight.w600,)
                 ],
               ),
             ),
