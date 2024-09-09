@@ -1,6 +1,5 @@
 import 'package:dr_apointment/controller/getx_controller/language_list.dart';
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:dr_apointment/view/screen/bottom_navigation_bar.dart';
 import 'package:dr_apointment/view/screen/change_language/widget/confirm_change_language_dialog.dart';
 import 'package:dr_apointment/view/screen/change_language/widget/language_list_view_card.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +47,7 @@ class ChangeLanguage extends StatelessWidget {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Get.off(() => const BottomNavBar());
+                        Get.back();
                       },
                       icon: const Icon(
                         Icons.arrow_back,
@@ -74,12 +73,7 @@ class ChangeLanguage extends StatelessWidget {
                                 screenHeight: screenHeight,
                                 screenWidth: screenWidth,
                                 onTap: () {
-                                  ConfirmChangeLanguageDialog(
-                                    screenHeight: screenHeight,
-                                    screenWidth: screenWidth,
-                                    no: () {Get.back();},
-                                    yes: () {Get.back();},
-                                  );
+                                  Get.dialog(ConfirmChangeLanguageDialog());
                                 },
                                 title:
                                     "${controller.language[index].language}");
