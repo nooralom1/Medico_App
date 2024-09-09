@@ -1,5 +1,5 @@
 import 'package:dr_apointment/view/common_widget/common_button.dart';
-import 'package:dr_apointment/view/screen/language/language.dart';
+import 'package:dr_apointment/view/screen/set_language/set_language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -45,7 +45,7 @@ class Welcome extends StatelessWidget {
                   fSize: 16,
                   fWeight: FontWeight.w500,
                   onTap: () {
-                    Get.to(Language());
+                    Get.to(SetLanguage());
                   },
                 )
               ],
