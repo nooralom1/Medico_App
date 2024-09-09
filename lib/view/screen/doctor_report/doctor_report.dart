@@ -1,5 +1,6 @@
+import 'package:dr_apointment/controller/getx_controller/doctor_report.dart';
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:dr_apointment/view/screen/bottom_navigation_bar.dart';
+import 'package:dr_apointment/view/common_widget/common_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,6 +9,7 @@ class DoctorReport extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(DoctorReportController());
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return SafeArea(
@@ -44,26 +46,51 @@ class DoctorReport extends StatelessWidget {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Get.off(() => BottomNavBar());
+                        Get.back();
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back,
                         color: Colors.black,
                         size: 27,
                       )),
-                  CommonText(
+                  const CommonText(
                     text: "Doctor Report",
                     fSize: 18,
                     fWeight: FontWeight.w600,
                   )
                 ],
               ),
-              SizedBox(height: screenHeight * 0.3),
-              CommonText(
-                text: "Coming Soon",
-                fSize: 28,
-                fColor: Color(0xffBAAFAF),
-              ),
+              SizedBox(height: screenHeight * 0.02),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: screenHeight * 0.07,
+                      width: screenWidth,
+                      child: TextField(
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: "Type Your Mobile Number",
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide.none)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: screenHeight * 0.01,
+                    ),
+                    CommonButton(
+                        height: screenHeight * 0.06,
+                        width: screenWidth,
+                        buttonName: "Track On",
+                        fColor: Colors.white,
+                        fSize: 16,
+                        onTap: () {}),
+                  ],
+                ),
+              )
             ],
           ),
         ),
