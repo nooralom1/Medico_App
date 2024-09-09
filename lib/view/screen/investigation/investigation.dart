@@ -49,7 +49,7 @@ class Investigation extends StatelessWidget {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Get.off(() => BottomNavBar());
+                        Get.back();
                       },
                       icon: Icon(
                         Icons.arrow_back,
