@@ -44,7 +44,7 @@ class HospitalInfo extends StatelessWidget {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Get.off(() => const BottomNavBar());
+                        Get.back();
                       },
                       icon: const Icon(
                         Icons.arrow_back,
