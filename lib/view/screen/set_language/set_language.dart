@@ -35,7 +35,9 @@ class SetLanguage extends StatelessWidget {
                     height: screenHeight * 0.15,
                   ),
                   Image.asset("assets/images/language_page_image.png"),
-                  SizedBox(height: screenHeight * 0.1,),
+                  SizedBox(
+                    height: screenHeight * 0.1,
+                  ),
                   CommonButton(
                       height: screenHeight * 0.06,
                       width: screenWidth,
@@ -44,8 +46,12 @@ class SetLanguage extends StatelessWidget {
                       fSize: 16,
                       btnColor: CupertinoColors.white,
                       btnBorderColor: Colors.black,
-                      onTap: () {}),
-                  SizedBox(height: screenHeight*0.05,),
+                      onTap: () {
+                        Get.to(const Location());
+                      }),
+                  SizedBox(
+                    height: screenHeight * 0.05,
+                  ),
                   CommonButton(
                       height: screenHeight * 0.06,
                       width: screenWidth,
@@ -54,7 +60,7 @@ class SetLanguage extends StatelessWidget {
                       fWeight: FontWeight.w500,
                       fSize: 16,
                       onTap: () {
-                        Get.to(Location());
+                        Get.to(const Location());
                       }),
                 ],
               ),
