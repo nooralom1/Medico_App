@@ -4,7 +4,7 @@ class SearchField extends StatelessWidget {
   const SearchField({
     super.key,
     required this.screenHeight,
-    required this.screenWidth, required this.textEditingController, required this.onTap, required this.hinText, this.prefixIcon, required this.suffixIcon,
+    required this.screenWidth, required this.textEditingController, required this.onTap, required this.hinText, this.prefixIcon, required this.suffixIcon, this.borderSide,
   });
 
   final double screenHeight;
@@ -14,6 +14,7 @@ class SearchField extends StatelessWidget {
   final String hinText;
   final IconData? prefixIcon;
   final IconData suffixIcon;
+  final BorderSide? borderSide;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class SearchField extends StatelessWidget {
             ),
           ),
           border: OutlineInputBorder(
-              borderSide: BorderSide.none,
+              borderSide:borderSide ?? BorderSide.none,
               borderRadius: BorderRadius.circular(10))),
     );
   }
