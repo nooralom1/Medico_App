@@ -1,6 +1,5 @@
 import 'package:dr_apointment/controller/api_controller/category.dart';
 import 'package:dr_apointment/model/category.dart';
-import 'package:dr_apointment/view/common_widget/common_Text.dart';
 import 'package:dr_apointment/view/screen/department/department.dart';
 import 'package:dr_apointment/view/screen/doctor/doctor.dart';
 import 'package:dr_apointment/view/screen/doctor_report/doctor_report.dart';
@@ -18,6 +17,30 @@ class HomeController extends GetxController {
   TextEditingController searchController = TextEditingController();
   RxBool isLoading = false.obs;
   RxList<Categories> category = <Categories>[].obs;
+  RxList<String> doctor = [
+  'Noor',
+  'Sakib',
+  'Fahim',
+  'Raju',
+  'Shovon',
+  ].obs;
+  var selectedDoctor = ''.obs;
+  RxList<String> department = [
+    'Cardiology',
+    'Neurology',
+    'Oncology',
+    'Urology',
+    'Hematology',
+  ].obs;
+  var selectedDepartment = ''.obs;
+  RxList<String> designation = [
+    'Administrative Assistant',
+    'Receptionist',
+    'Office Manager',
+    'Director',
+    'Administrator'
+  ].obs;
+  var selectedDesignation = ''.obs;
 
   getCategory() async {
     isLoading.value = true;
