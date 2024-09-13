@@ -1,5 +1,7 @@
 import 'package:dr_apointment/controller/getx_controller/home.dart';
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
+import 'package:dr_apointment/view/common_widget/common_button.dart';
+import 'package:dr_apointment/view/common_widget/common_drop_down_button.dart';
 import 'package:dr_apointment/view/screen/home/widget/category_view_card.dart';
 import 'package:dr_apointment/view/screen/home/widget/custom_slider.dart';
 import 'package:dr_apointment/view/common_widget/search_feild.dart';
@@ -25,13 +27,13 @@ class Home extends StatelessWidget {
           backgroundColor: Colors.blue.shade100,
           title: Image.asset("assets/logos/Group 8.png"),
           centerTitle: true,
-          actions:  [
+          actions: [
             Padding(
               padding: EdgeInsets.only(right: 20),
               child: InkWell(
-                onTap: (){
-                  Get.to(()=>NotificationPage());
-                },
+                  onTap: () {
+                    Get.to(() => NotificationPage());
+                  },
                   child: Icon(Icons.notifications_active_outlined)),
             )
           ],
@@ -64,7 +66,90 @@ class Home extends StatelessWidget {
                     textEditingController: controller.searchController,
                     onTap: () {
                       Get.dialog(AlertDialog(
-
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                        content: SizedBox(
+                          height: screenHeight * 0.36,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CommonDropDownButton(
+                                labelText: "Doctor",
+                                value: controller.selectedDoctor.value.isEmpty
+                                    ? null
+                                    : controller.selectedDoctor.value,
+                                iSize: 35,
+                                items: controller.doctor.map((String doctor) {
+                                  return DropdownMenuItem<String>(
+                                    value: doctor,
+                                    child: Text(doctor),
+                                  );
+                                }).toList(),
+                                onChanged: (value) {
+                                  controller.selectedDoctor.value = value!;
+                                },
+                              ),
+                              SizedBox(height: screenHeight * 0.01),
+                              SizedBox(
+                                height: screenHeight * 0.06,
+                                width: screenWidth,
+                                child: SearchField(
+                                  screenHeight: screenHeight,
+                                  screenWidth: screenWidth,
+                                  textEditingController:
+                                      controller.searchController,
+                                  onTap: () {},
+                                  hinText: "Search doctor / BDMC",
+                                  suffixIcon: Icons.search,
+                                  borderSide: BorderSide(color: Colors.red),
+                                ),
+                              ),
+                              SizedBox(height: screenHeight * 0.01),
+                              CommonDropDownButton(
+                                labelText: "Department",
+                                value:
+                                    controller.selectedDepartment.value.isEmpty
+                                        ? null
+                                        : controller.selectedDepartment.value,
+                                iSize: 35,
+                                items: controller.department
+                                    .map((String department) {
+                                  return DropdownMenuItem<String>(
+                                    value: department,
+                                    child: Text(department),
+                                  );
+                                }).toList(),
+                                onChanged: (value) {
+                                  controller.selectedDepartment.value = value!;
+                                },
+                              ),
+                              SizedBox(height: screenHeight * 0.01),
+                              CommonDropDownButton(
+                                labelText: "Designation",
+                                value:
+                                    controller.selectedDesignation.value.isEmpty
+                                        ? null
+                                        : controller.selectedDesignation.value,
+                                iSize: 35,
+                                items: controller.designation
+                                    .map((String designation) {
+                                  return DropdownMenuItem<String>(
+                                    value: designation,
+                                    child: Text(designation),
+                                  );
+                                }).toList(),
+                                onChanged: (value) {
+                                  controller.selectedDesignation.value = value!;
+                                },
+                              ),
+                              SizedBox(height: screenHeight * 0.02),
+                              CommonButton(
+                                  height: screenHeight * 0.06,
+                                  width: screenWidth,
+                                  buttonName: "Search",
+                                  onTap: () {})
+                            ],
+                          ),
+                        ),
                       ));
                     },
                     hinText: 'Search Hospital for doctor',
