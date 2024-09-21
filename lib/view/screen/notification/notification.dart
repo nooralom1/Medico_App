@@ -1,6 +1,5 @@
 import 'package:dr_apointment/controller/getx_controller/notification.dart';
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:dr_apointment/view/screen/bottom_navigation_bar.dart';
 import 'package:dr_apointment/view/screen/notification/widget/notification_view_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -49,12 +48,12 @@ class NotificationPage extends StatelessWidget {
                       onPressed: () {
                         Get.back();
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back,
                         color: Colors.black,
                         size: 27,
                       )),
-                  CommonText(
+                  const CommonText(
                     text: "Notification",
                     fSize: 18,
                     fWeight: FontWeight.w600,
@@ -79,7 +78,7 @@ class NotificationPage extends StatelessWidget {
                         ),
                       ),
                     )
-                  : Center(
+                  : const Center(
                       child: CircularProgressIndicator(),
                     ))
             ],
