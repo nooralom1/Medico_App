@@ -14,17 +14,17 @@ class ShowAboutDialog extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: AlertDialog(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         content: SizedBox(
           height: screenHeight * 0.12,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [const CommonText(
-              text: "About US",
-              fSize: 16,
-              fWeight: FontWeight.w700,
-            ),
+            children: [
+              const CommonText(
+                text: "About US",
+                fSize: 16,
+                fWeight: FontWeight.w700,
+              ),
               SizedBox(
                 height: screenHeight * 0.02,
               ),
