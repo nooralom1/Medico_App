@@ -1,4 +1,3 @@
-import 'package:dr_apointment/controller/getx_controller/home.dart';
 import 'package:dr_apointment/controller/getx_controller/hospital.dart';
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
 import 'package:dr_apointment/view/common_widget/search_feild.dart';
@@ -68,8 +67,8 @@ class Hospital extends StatelessWidget {
               SizedBox(
                 height: screenHeight * 0.02,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -116,13 +115,13 @@ class Hospital extends StatelessWidget {
                               location:
                                   '${controller.hospital[index].location}',
                               code: 'Code: ${controller.hospital[index].code}',
-                              onTap: () {Get.to(()=>DoctorInfo());},
+                              onTap: () {Get.to(()=>const DoctorInfo());},
                             );
                           },
                         ),
                       ),
                     )
-                  : Center(
+                  : const Center(
                       child: CircularProgressIndicator(),
                     ))
             ],
