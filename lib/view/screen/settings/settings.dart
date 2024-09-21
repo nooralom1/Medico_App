@@ -1,5 +1,4 @@
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:dr_apointment/view/screen/bottom_navigation_bar.dart';
 import 'package:dr_apointment/view/screen/change_language/change_language.dart';
 import 'package:dr_apointment/view/screen/settings/widget/setting_list_card.dart';
 import 'package:dr_apointment/view/screen/settings/widget/show_about_dialog.dart';
@@ -67,7 +66,7 @@ class Settings extends StatelessWidget {
                 screenWidth: screenWidth,
                 name: 'Language',
                 onTap: () {
-                  Get.to(()=>const ChangeLanguage());
+                  Get.to(() => const ChangeLanguage());
                 },
               ),
               SizedBox(
