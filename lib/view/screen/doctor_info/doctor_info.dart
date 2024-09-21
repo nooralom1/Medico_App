@@ -20,12 +20,12 @@ class DoctorInfo extends StatelessWidget {
           centerTitle: true,
           actions: [
             Padding(
-              padding: EdgeInsets.only(right: 20),
+              padding: const EdgeInsets.only(right: 20),
               child: InkWell(
                   onTap: () {
-                    Get.to(() => NotificationPage());
+                    Get.to(() => const NotificationPage());
                   },
-                  child: Icon(Icons.notifications_active_outlined)),
+                  child: const Icon(Icons.notifications_active_outlined)),
             )
           ],
         ),
