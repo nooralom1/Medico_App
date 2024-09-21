@@ -13,7 +13,7 @@ class InviteDialog extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       content: SizedBox(
         height: screenHeight*0.14,
-        child:  Column(
+        child:  const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
