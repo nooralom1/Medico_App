@@ -41,11 +41,11 @@ class Welcome extends StatelessWidget {
                   height: screenHeight * 0.06,
                   width: screenWidth,
                   buttonName: 'GET START',
-                  fColor: Color(0xffFAFAFA),
+                  fColor: const Color(0xffFAFAFA),
                   fSize: 16,
                   fWeight: FontWeight.w500,
                   onTap: () {
-                    Get.to(SetLanguage());
+                    Get.to( const SetLanguage());
                   },
                 )
               ],
