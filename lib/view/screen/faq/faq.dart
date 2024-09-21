@@ -1,6 +1,5 @@
 import 'package:dr_apointment/controller/getx_controller/faq.dart';
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:dr_apointment/view/screen/bottom_navigation_bar.dart';
 import 'package:dr_apointment/view/screen/faq/widget/list_view_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
