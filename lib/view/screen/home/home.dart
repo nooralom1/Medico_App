@@ -29,12 +29,12 @@ class Home extends StatelessWidget {
           centerTitle: true,
           actions: [
             Padding(
-              padding: EdgeInsets.only(right: 20),
+              padding: const EdgeInsets.only(right: 20),
               child: InkWell(
                   onTap: () {
-                    Get.to(() => NotificationPage());
+                    Get.to(() => const NotificationPage());
                   },
-                  child: Icon(Icons.notifications_active_outlined)),
+                  child: const Icon(Icons.notifications_active_outlined)),
             )
           ],
         ),
@@ -100,7 +100,7 @@ class Home extends StatelessWidget {
                                   onTap: () {},
                                   hinText: "Search doctor / BDMC",
                                   suffixIcon: Icons.search,
-                                  borderSide: BorderSide(color: Colors.red),
+                                  borderSide: const BorderSide(color: Colors.red),
                                 ),
                               ),
                               SizedBox(height: screenHeight * 0.01),
@@ -165,7 +165,7 @@ class Home extends StatelessWidget {
               SizedBox(
                 height: screenHeight * 0.02,
               ),
-              CommonText(
+              const CommonText(
                 text: "Category",
                 fWeight: FontWeight.w600,
                 fSize: 20,
@@ -180,36 +180,34 @@ class Home extends StatelessWidget {
                           height: screenHeight * 0.5,
                           width: screenWidth * 0.95,
                           decoration: BoxDecoration(
-                              color: Color(0xffD4D4D4),
+                              color: const Color(0xffD4D4D4),
                               borderRadius: BorderRadius.circular(10)),
-                          child: Container(
-                            child: Padding(
-                              padding: const EdgeInsets.only(top: 20),
-                              child: GridView.builder(
-                                itemCount: controller.category.length,
-                                gridDelegate:
-                                    SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 3,
-                                ),
-                                itemBuilder: (context, index) {
-                                  return CategoryViewCard(
-                                    screenHeight: screenHeight,
-                                    screenWidth: screenWidth,
-                                    imageUrl:
-                                        '${controller.category[index].image}',
-                                    tittle:
-                                        '${controller.category[index].name}',
-                                    onTap: () {
-                                      controller.navigatePage(index);
-                                    },
-                                  );
-                                },
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: GridView.builder(
+                              itemCount: controller.category.length,
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
                               ),
+                              itemBuilder: (context, index) {
+                                return CategoryViewCard(
+                                  screenHeight: screenHeight,
+                                  screenWidth: screenWidth,
+                                  imageUrl:
+                                      '${controller.category[index].image}',
+                                  tittle:
+                                      '${controller.category[index].name}',
+                                  onTap: () {
+                                    controller.navigatePage(index);
+                                  },
+                                );
+                              },
                             ),
                           ),
                         ),
                       )
-                    : Center(
+                    : const Center(
                         child: CircularProgressIndicator(),
                       ),
               ),
