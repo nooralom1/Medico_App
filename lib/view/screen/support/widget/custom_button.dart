@@ -1,5 +1,4 @@
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SupportButton extends StatelessWidget {
@@ -29,13 +28,13 @@ class SupportButton extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
-            color: btnColor ?? Color(0xff22A6FE), borderRadius: BorderRadius.circular(10),border: Border.all(color: btnBorderColor?? Color(0xff22A6FE))),
+            color: btnColor ?? const Color(0xff22A6FE), borderRadius: BorderRadius.circular(10),border: Border.all(color: btnBorderColor?? const Color(0xff22A6FE))),
         child: Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(buttonNameImage??""),
-                SizedBox(width: 5,),
+                const SizedBox(width: 5,),
                 CommonText(
                           text: buttonName,
                           fColor: fColor,
