@@ -5,7 +5,6 @@ import 'package:dr_apointment/view/screen/investigation/widget/list_view_card.da
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../bottom_navigation_bar.dart';
 
 class Investigation extends StatelessWidget {
   const Investigation({super.key});
@@ -51,12 +50,12 @@ class Investigation extends StatelessWidget {
                       onPressed: () {
                         Get.back();
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back,
                         color: Colors.black,
                         size: 27,
                       )),
-                  CommonText(
+                  const CommonText(
                     text: "Investigation",
                     fSize: 18,
                     fWeight: FontWeight.w600,
@@ -92,7 +91,7 @@ class Investigation extends StatelessWidget {
                               title: '${controller.investigation[index].title}',
                             );
                           }))
-                  : Center(
+                  : const Center(
                       child: CircularProgressIndicator(),
                     ))
             ],
