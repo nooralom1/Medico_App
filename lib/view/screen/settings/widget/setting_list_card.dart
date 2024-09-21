@@ -5,7 +5,9 @@ class SettingListViewCard extends StatelessWidget {
   const SettingListViewCard({
     super.key,
     required this.screenHeight,
-    required this.screenWidth, required this.name, required this.onTap,
+    required this.screenWidth,
+    required this.name,
+    required this.onTap,
   });
 
   final double screenHeight;
@@ -21,14 +23,17 @@ class SettingListViewCard extends StatelessWidget {
           height: screenHeight * 0.06,
           width: screenWidth * 0.93,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              color: Colors.white),
-          child: Center(child: Padding(
+              borderRadius: BorderRadius.circular(7), color: Colors.white),
+          child: Center(
+              child: Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                CommonText(text: name,fSize: 14,)
+                CommonText(
+                  text: name,
+                  fSize: 14,
+                )
               ],
             ),
           ))),
