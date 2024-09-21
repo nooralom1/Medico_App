@@ -73,7 +73,7 @@ class ChangeLanguage extends StatelessWidget {
                                 screenHeight: screenHeight,
                                 screenWidth: screenWidth,
                                 onTap: () {
-                                  Get.dialog(ConfirmChangeLanguageDialog());
+                                  Get.dialog(const ConfirmChangeLanguageDialog());
                                 },
                                 title:
                                     "${controller.language[index].language}");
