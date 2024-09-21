@@ -1,5 +1,4 @@
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:dr_apointment/view/screen/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -59,7 +58,7 @@ class HospitalInfo extends StatelessWidget {
                 ],
               ),
               SizedBox(height: screenHeight * 0.3),
-              CommonText(
+              const CommonText(
                 text: "Coming Soon",
                 fSize: 28,
                 fColor: Color(0xffBAAFAF),
