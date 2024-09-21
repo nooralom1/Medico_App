@@ -1,6 +1,4 @@
 import 'package:dr_apointment/view/common_widget/common_Text.dart';
-import 'package:dr_apointment/view/common_widget/common_button.dart';
-import 'package:dr_apointment/view/screen/bottom_navigation_bar.dart';
 import 'package:dr_apointment/view/screen/support/widget/bottom_container.dart';
 import 'package:dr_apointment/view/screen/support/widget/custom_button.dart';
 import 'package:flutter/cupertino.dart';
@@ -42,12 +40,12 @@ class Support extends StatelessWidget {
                             onPressed: () {
                               Get.back();
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.arrow_back,
                               color: Colors.black,
                               size: 27,
                             )),
-                        CommonText(
+                        const CommonText(
                           text: "Support",
                           fSize: 18,
                           fWeight: FontWeight.w600,
@@ -58,11 +56,11 @@ class Support extends StatelessWidget {
                       height: screenHeight * 0.01,
                     ),
                     Image.asset("assets/images/support.png"),
-                    CommonText(
+                    const CommonText(
                       text: "How May we Help you",
                       fSize: 28,
                     ),
-                    CommonText(
+                    const CommonText(
                       text: "Today",
                       fSize: 28,
                     ),
